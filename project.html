@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    >
+
+    <meta
+      name="description"
+      content="Explore the LEAPS Labor Services project portfolio: furnace overhaul, fabrication, FRP lamination, construction and installation."
+    >
+
+    <title>Projects | LEAPS Labor Services</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/leaps-logo.png"
+    >
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    >
+
+    <!-- Custom styles -->
+    <link href="project.css" rel="stylesheet">
+
+    <style>
+      #home.project-banner {
+        min-height: 480px;
+        display: flex;
+        align-items: center;
+        padding: 80px 0;
+        color: #fff;
+        background-color: #123d67;
+        background-image:
+          linear-gradient(
+            rgba(8, 25, 42, 0.65),
+            rgba(8, 25, 42, 0.65)
+          ),
+          url("images/project-banner.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #home.project-banner .lead {
+        max-width: 720px;
+      }
+
+      @media (max-width: 600px) {
+        #home.project-banner {
+          min-height: 360px;
+          padding: 60px 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--
+    <a class="skip-link" href="#projects">
+      Skip to projects
+    </a>
+    -->
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container justify-content-center">
+        <a
+          class="navbar-brand brand"
+          href="index.html"
+          aria-label="LEAPS home"
+        >
+          <img
+            src="images/leaps-word.png"
+            alt="Leaps"
+            class="portfolio-logo"
+          >
+        </a>
+
+        <button
+          class="navbar-toggler"
+          id="menuToggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="navbarMenu"
+          aria-label="Toggle navigation"
+        >
+          ☰
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse flex-lg-grow-0"
+          id="navbarMenu"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+
+            <!--
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            -->
+
+            <!--
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#quick-links">Quick Links</a>
+            </li>
+            -->
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                More
+              </a>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#quick-links">
+                    Quick Links
+                  </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="index.html#contact">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!--
+        <div id="navbarMenu" class="nav-menu">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="project.html"
+              >
+                Projects
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#quick-links">Quick Links</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        -->
+      </div>
+    </nav>
+
+    <!-- Static Project Banner -->
+    <section
+      id="home"
+      class="project-banner"
+      aria-labelledby="bannerTitle"
+    >
+      <div class="container text-center">
+        <!-- <p class="text-uppercase fw-semibold mb-3">
+          LEAPS Labor Services
+        </p> -->
+
+        <h1 id="bannerTitle" class="display-6 fw-bold mb-3">
+          Our Projects
+        </h1>
+
+        <p class="lead mx-auto mb-4 fst-italic">
+          Industrial expertise, quality workmanship, and dependable service.
+          Explore the work of LEAPS Labor Services across furnace overhaul, mechanical and electrical works, fabrication, FRP lamination, construction, and equipment installation.
+        </p>
+
+        <a class="btn btn-primary btn-lg" href="#projects">
+          Explore Our Projects
+        </a>
+      </div>
+    </section>
+
+    <!-- Hidden compatibility hooks for the existing project.js. -->
+    <div
+      id="projectCarousel"
+      hidden
+      aria-hidden="true"
+      style="display: none !important;"
+    >
+      <div id="heroSlides"></div>
+      <button id="heroPrev" type="button" tabindex="-1"></button>
+      <button id="heroNext" type="button" tabindex="-1"></button>
+      <div id="heroIndicators"></div>
+    </div>
+
+    <!-- Company Introduction -->
+    <section id="about" class="container py-5 intro">
+      <p class="eyebrow text-center">
+        OUR EXPERIENCE. YOUR NEXT PROJECT.
+      </p>
+
+      <h2 class="text-center mb-3">
+        Industrial expertise, in pictures.
+      </h2>
+
+      <p class="lead text-center">
+        
+
+        We take pride in our mantra of providing the best solutions for our client’s needs. We will be with you from project conception and completion. There is no project too small. All projects are approached the same way no matter the scale. Careful planning and precise execution are a must on everything that we do.
+      </p>  
+        <br>
+      <p class="lead text-center">
+        The quality of the workforce will definitely be a deciding factor for a project’s success so we make sure that our staff go on continuous training so their skills will be at par with local and international standards.
+      </p>
+     <!--  <br>
+        <h2 class="text-center mb-3 text-primary">PROJECTS ACCOMPLISHED</h2>
+      <div class="stats">
+
+        <div>
+          <strong>20</strong>
+          <span>Project categories</span>
+        </div>
+
+        <div>
+          <strong>202</strong>
+          <span>Project &amp; location photos</span>
+        </div>
+
+        <div>
+          <strong>2013</strong>
+          <span>Company established</span>
+        </div>
+      </div> -->
+    </section>
+
+    <!-- Project Gallery -->
+    <main id="projects" class="bg-light py-5">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">
+              THE PROJECT GALLERY
+            </p>
+
+            <h2>Our Projects</h2>
+          </div>
+
+          <a class="btn btn-outline-primary" href="#contact">
+            Discuss your project →
+          </a>
+        </div>
+
+        <!-- Search and Category Filter -->
+        <div class="gallery-controls">
+          <div>
+            <label for="projectSearch" class="form-label">
+              Search projects
+            </label>
+
+            <input
+              id="projectSearch"
+              type="search"
+              class="form-control"
+              placeholder="Try boiler, FRP, electrical…"
+            >
+          </div>
+
+          <div>
+            <label for="projectFilter" class="form-label">
+              Project category
+            </label>
+
+            <select id="projectFilter" class="form-select">
+              <option value="all">
+                All projects &amp; location
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <p
+          id="resultCount"
+          class="text-secondary"
+          aria-live="polite"
+        ></p>
+
+        <!-- Photos are generated by project.js -->
+        <div id="projectGallery"></div>
+
+        <!-- Empty Search Results -->
+        <div
+          id="emptyState"
+          class="empty-state"
+          hidden
+        >
+          <h3>No matching projects</h3>
+
+          <p>
+            Try a different keyword or category.
+          </p>
+
+          <button
+            id="clearFilters"
+            class="btn btn-primary"
+            type="button"
+          >
+            Show all projects
+          </button>
+        </div>
+
+        <noscript>
+          <p>
+            Please enable JavaScript to view the photo gallery.
+            All image files are also available in the
+            images/projects folder.
+          </p>
+        </noscript>
+      </div>
+    </main>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-dark text-white py-5">
+      <div class="container text-center">
+        <p class="eyebrow">
+          LET’S GET TO WORK
+        </p>
+
+        <h2 class="mb-3">
+          Have an industrial project in mind?
+        </h2>
+
+        <p class="contact-copy">
+          Connect with LEAPS Labor Services to discuss
+          your requirements.
+        </p>
+
+        <a
+          class="btn btn-primary btn-lg"
+          href="index.html#contact"
+        >
+          Message Us
+        </a>
+
+        <p class="mt-4 mb-0">
+          Pasil, Matlang, Isabel, Leyte
+        </p>
+
+        <a
+          class="contact-email"
+          href="mailto:leaps.services@gmail.com"
+        >
+          leaps.services@gmail.com
+        </a>
+      </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section id="quick-links" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">
+          Quick Links
+        </h2>
+
+        <div class="row g-4 text-center">
+          <div class="col-sm-6 col-lg-3">
+            <h3 class="h5">Company</h3>
+
+            <a href="index.html">
+              Home
+            </a>
+
+            <a href="index.html#about">
+              About LEAPS
+            </a>
+          </div>
+
+          <div class="col-sm-6 col-lg-3">
+            <h3 class="h5">
+              Overhaul Works
+            </h3>
+
+            <a href="#cf-partial-overhaul-boiler">
+              Boiler overhaul
+            </a>
+
+            <a href="#cf-partial-overhaul-mechanical">
+              Mechanical works
+            </a>
+          </div>
+
+          <div class="col-sm-6 col-lg-3">
+            <h3 class="h5">
+              Fabrication &amp; Installation
+            </h3>
+
+            <a href="#frp-lamination">
+              FRP lamination
+            </a>
+
+            <a href="#heat-exchanger-fabrication">
+              Heat exchanger fabrication
+            </a>
+          </div>
+
+          <div class="col-sm-6 col-lg-3">
+            <h3 class="h5">
+              Connect
+            </h3>
+
+            <a href="index.html#contact">
+              Contact us
+            </a>
+
+            <a href="#home">
+              Back to top
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+      <div class="container">
+        <p class="mb-0">
+          &copy; 2026 LEAPS Labor Services.
+          All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Full-Size Photo Viewer -->
+    <dialog
+      id="photoViewer"
+      aria-labelledby="viewerTitle"
+    >
+      <div class="viewer-top">
+        <h2 id="viewerTitle"></h2>
+
+        <button
+          id="closeViewer"
+          type="button"
+          aria-label="Close photo viewer"
+        >
+          ×
+        </button>
+      </div>
+
+      <div class="viewer-image">
+        <button
+          id="photoPrev"
+          type="button"
+          aria-label="Previous photo"
+        >
+          ‹
+        </button>
+
+        <img id="viewerImage" alt="">
+
+        <button
+          id="photoNext"
+          type="button"
+          aria-label="Next photo"
+        >
+          ›
+        </button>
+      </div>
+
+      <div class="viewer-bottom">
+        <p id="viewerCaption"></p>
+
+        <!-- <a
+          id="downloadPhoto"
+          class="btn btn-primary"
+          download
+        >
+          Download photo
+        </a> -->
+      </div>
+    </dialog>
+
+    <!-- Project data read by project.js -->
+    <script id="projectData" type="application/json">[]</script>
+
+    <!-- Generate the complete project and photo records -->
+    <script>
+      (() => {
+        const projectDefinitions = [
+          // {
+          //   id: "establishment-location",
+          //   name: "Establishment location",
+          //   pages: [7],
+          //   photosPerPage: 2
+          // },
+          {
+            id: "cf-partial-overhaul-boiler",
+            name: "CF partial overhaul - Boiler",
+            pages: [19, 20],
+            photosPerPage: 8
+          },
+          {
+            id: "cf-partial-overhaul-structural",
+            name: "CF partial overhaul - Structural",
+            pages: [21, 22],
+            photosPerPage: 8
+          },
+          {
+            id: "cf-partial-overhaul-mechanical",
+            name: "CF partial overhaul - Mechanical",
+            pages: [23],
+            photosPerPage: 8
+          },
+          {
+            id: "cf-partial-overhaul-electrical",
+            name: "CF partial overhaul - Electrical",
+            pages: [24, 25],
+            photosPerPage: 8
+          },
+          {
+            id: "frp-lamination",
+            name: "FRP Lamination",
+            pages: [26, 27],
+            photosPerPage: 8
+          },
+          {
+            id: "construction-ups-control-room",
+            name: "Construction - UPS control room",
+            pages: [28],
+            photosPerPage: 8
+          },
+          {
+            id: "construction-magnetic",
+            name: "Construction - Magnetic",
+            pages: [29],
+            photosPerPage: 8
+          },
+          {
+            id: "construction-concreting",
+            name: "Construction - Concreting",
+            pages: [30, 31],
+            photosPerPage: 8
+          },
+          {
+            id: "absorption-dryer-installation",
+            name: "Installation of new absorption dryer",
+            pages: [32],
+            photosPerPage: 8
+          },
+          {
+            id: "package-boiler-installation",
+            name: "Installation of new package boiler",
+            pages: [33],
+            photosPerPage: 8
+          },
+          {
+            id: "bag-filter-cover-fabrication",
+            name: "Off-site fabrication - Bag filter cover",
+            pages: [34],
+            photosPerPage: 8
+          },
+          {
+            id: "hcl-tank-fabrication",
+            name: "Off-site fabrication - HCL tank",
+            pages: [35],
+            photosPerPage: 8
+          },
+          {
+            id: "heating-element-repair",
+            name: "Off-site repair - Heating element",
+            pages: [36],
+            photosPerPage: 8
+          },
+          {
+            id: "heat-exchanger-fabrication",
+            name: "Off-site fabrication - Heat exchanger",
+            pages: [37],
+            photosPerPage: 8
+          },
+          {
+            id: "frp-tank-installation",
+            name: "Installation of new FRP tank",
+            pages: [38],
+            photosPerPage: 8
+          },
+          {
+            id: "acid-plant-tc-j41-candle-demister",
+            name: "Acid plant TC-J41 - Candle demister",
+            pages: [39],
+            photosPerPage: 8
+          },
+          {
+            id: "acid-cooler-mechanical-works",
+            name: "Acid cooler - Mechanical works",
+            pages: [40],
+            photosPerPage: 8
+          },
+          {
+            id: "edc-tongonan",
+            name: "EDC Tongonan - Supply and installation",
+            pages: [41],
+            photosPerPage: 8
+          },
+          {
+            id: "scaffolding-works",
+            name: "Scaffolding works - Supply and installation",
+            pages: [42],
+            photosPerPage: 8
+          },
+          {
+            id: "hdpe-piping-pp-liner",
+            name: "HDPE piping and PP liner - Supply and installation",
+            pages: [43],
+            photosPerPage: 8
+          }
+        ];
+
+        // Format numbers as 01, 02, 03, etc.
+        const padNumber = number =>
+          String(number).padStart(2, "0");
+
+        // Build each project's photo records.
+        const projectGroups = projectDefinitions.map(project => {
+          const photos = [];
+
+          project.pages.forEach(page => {
+            for (
+              let number = 1;
+              number <= project.photosPerPage;
+              number++
+            ) {
+              const filename =
+                `${project.id}-p${padNumber(page)}-${padNumber(number)}.jpg`;
+
+              photos.push({
+                src: `images/projects/${filename}`,
+                thumb: `images/projects/thumb-${filename}`,
+                page: page,
+                number: number,
+                caption:
+                  `${project.name}`
+                  // `${project.name} | Photo ${padNumber(photos.length + 1)}`
+              });
+            }
+          });
+
+          return {
+            id: project.id,
+            name: project.name,
+            photos: photos
+          };
+        });
+
+        // Store the generated JSON where project.js expects it.
+        document.getElementById("projectData").textContent =
+          JSON.stringify(projectGroups);
+      })();
+    </script>
+
+    <!-- Load after the project data has been generated -->
+    <script src="project.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
