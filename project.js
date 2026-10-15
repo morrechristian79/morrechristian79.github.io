@@ -72,10 +72,10 @@ $('heroPrev').onclick = () => showHero(heroIndex - 1);
 $('heroNext').onclick = () => showHero(heroIndex + 1);
 
 // Toggle the navigation menu
-$('menuToggle').onclick = () => {
-  const open = $('navbarMenu').classList.toggle('open');
-  $('menuToggle').setAttribute('aria-expanded', open);
-};
+// $('menuToggle').onclick = () => {
+//   const open = $('navbarMenu').classList.toggle('open');
+//   $('menuToggle').setAttribute('aria-expanded', open);
+// };
 
 // Populate the project filter
 groups.forEach(group => {
